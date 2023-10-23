@@ -1,0 +1,79 @@
+{
+	// 配置App的路由
+	"pages": [{ // 发现(首页)
+			"path": "pages/index/index", //路由url
+			"style": {
+				"navigationStyle": "custom", //取消默认的原生导航栏
+				"enablePullDownRefresh": true, // 下滑刷新
+				"app-plus": {
+					"pullToRefresh": { // 自定义下滑刷新样式
+						"color": "#F33E54",
+						"style": "default"
+					}
+				}
+			}
+		},
+		{ // 个人中心
+			"path": "pages/My/My",
+			"style": {
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": false
+			}
+		},
+		{ //搜索页面
+			"path": "pages/search/search",
+			"style": {
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": false
+			}
+		},
+		{ //音乐播放页面
+			"path": "pages/music/music",
+			"style": {
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": false
+			}
+		},
+		{ //榜单数据详情页
+			"path": "pages/toplistInfo/toplistInfo",
+			"style": {
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": false
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "",
+		"navigationBarBackgroundColor": "#F7F9FC",
+		"backgroundColor": "#F4F4F4",
+		"app-plus": { //去除所有的默认导航栏
+			"titleNView": false,
+			"bounce": "none" // 将回弹属性关掉
+		}
+	},
+	"tabBar": {
+		"color": "#8F8F94",
+		"selectedColor": "#F33E54",
+		"backgroundColor": "#FCFDFF",
+		"borderStyle": "white",
+		"fontSize": "11px",
+		"iconWidth": "15px",
+		"spacing": "3px",
+		"list": [{ //底部tabbar对应的路由
+				//发现（首页）
+				"pagePath": "pages/index/index",
+				"text": "发现",
+				"iconPath": "static/icon/home.png",
+				"selectedIconPath": "static/icon/homeactive.png"
+			},
+			{ //个人中心
+				"pagePath": "pages/My/My",
+				"text": "个人中心",
+				"iconPath": "static/icon/me.png",
+				"selectedIconPath": "static/icon/meactive.png"
+			}
+		]
+	},
+	"uniIdRouter": {}
+}
